@@ -31,7 +31,11 @@ main proc
     mov   ax,@data
     mov   ds,ax
 
-ShowMenu:       
+ShowMenu: 
+    mov ah, 02    ; secventa de cod care genereaza un bip
+    mov dl, 07h
+    int 21h 
+         
     lea     dx, msg1  
     mov     ah, 09h 
     int     21h     
@@ -54,18 +58,25 @@ getnum:
 
         
 Quit: 
+    mov ah, 02    ; secventa de cod care genereaza un bip
+    mov dl, 07h
+    int 21h 
    mov   ah,4ch
    int   21h
       
 
-ArataDespre:       
+ArataDespre:           
     lea     dx, Despre  
     mov     ah, 09h 
     int     21h    
     jmp     ShowMenu 
     
     
-Submenu: 
+Submenu:
+     mov ah, 02    ; secventa de cod care genereaza un bip
+     mov dl, 07h
+     int 21h
+          
      lea     dx, msg2  
      mov     ah, 09h 
      int     21h 
@@ -98,28 +109,67 @@ getnum1:
     jmp     DesenCasa
 
 ; culorile: am ales bh registrul in care sa stochez culoarea aleasa     
-Blue: 
-     mov bh, 9
+Blue:                   
+    mov ah, 02    ; secventa de cod care genereaza un bip
+    mov dl, 07h
+    int 21h      
+    
+      mov bh, 9
     jmp DesenCasa
-Green:           
+    
+Green:   
+    mov ah, 02    ; secventa de cod care genereaza un bip
+    mov dl, 07h
+    int 21h      
+      
       mov bh,10 
-    jmp DesenCasa
-Cyan:            
+    jmp DesenCasa 
+    
+Cyan:           
+    mov ah, 02    ; secventa de cod care genereaza un bip
+    mov dl, 07h
+    int 21h    
+    
       mov bh,11
     jmp DesenCasa
-Red:             
+    
+Red:           
+    mov ah, 02    ; secventa de cod care genereaza un bip
+    mov dl, 07h
+    int 21h     
+    
      mov bh,4
-    jmp DesenCasa  
-Magenta:             
+    jmp DesenCasa   
+    
+Magenta:          
+    mov ah, 02    ; secventa de cod care genereaza un bip
+    mov dl, 07h
+    int 21h 
+      
      mov bh,13
-    jmp DesenCasa
-Galben:             
+    jmp DesenCasa  
+    
+Galben:         
+    mov ah, 02    ; secventa de cod care genereaza un bip
+    mov dl, 07h
+    int 21h       
+    
      mov bh,14
-    jmp DesenCasa
-Alb:             
+    jmp DesenCasa 
+    
+Alb:               
+    mov ah, 02    ; secventa de cod care genereaza un bip
+    mov dl, 07h
+    int 21h      
+    
      mov bh,15
-    jmp DesenCasa
-Maro:             
+    jmp DesenCasa   
+    
+Maro:            
+    mov ah, 02    ; secventa de cod care genereaza un bip
+    mov dl, 07h
+    int 21h       
+    
      mov bh,6
     jmp DesenCasa                
     
@@ -507,6 +557,9 @@ rama2_2:
      cmp dx, 105   ;rand
 ja rama2_2
 
+mov ah, 02    ; secventa de cod care genereaza un bip
+mov dl, 07h
+int 21h 
       
 mov ah,00
 int 16h

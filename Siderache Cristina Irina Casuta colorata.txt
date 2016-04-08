@@ -10,3 +10,6 @@ cu culorile disponibile pentru colorare cat si o optiune de back.
 De asemenea, am utilizat si un sistem de control al versiunilor (GitHub)
   
 https://github.com/cristina-siderache/SMP
+
+Ulterior, dupa ce am incarcat tema am adaugat si o secventa de cod de generare a unui sunet (bip) la alegerea
+unei optiuni in cadrul meniului dar si la finalizarea desenului casutei
