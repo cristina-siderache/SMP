@@ -1,0 +1,12 @@
+Siderache Cristina Irina 332 AA
+
+
+Programul are ca scop desenarea unei casute colorate.
+Dupa prima rulare a programului, intampinam un meniu simplu cu 3 optiuni
+unde putem alege sa vizualizam unele detalii, sa iesim din program si sa alegem culoarea cu care 
+vrem ca programul sa deseneze casa; Aceasta ultima optiune ne trimite intr-un submeniu unde avem lista
+cu culorile disponibile pentru colorare cat si o optiune de back.
+
+De asemenea, am utilizat si un sistem de control al versiunilor (GitHub)
+  
+https://github.com/cristina-siderache/SMP
